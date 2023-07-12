@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travail pratique 2 Programmation d'interface Web 1</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <!-- scripts -->
+    <script src="./assets/script/aTask.js"></script>
+    <script src="./assets/script/Task.js"></script>
+    <script src="./assets/script/Form.js"></script>
+    <script src="./assets/script/SortTask.js"></script>
+    <script src="./assets/script/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>TP2</h1>
+        <p>Un gestionnaire de tâches (to-do-list) en POO</p>
+        <hr>
+    </header>
+    <main>
+        <section data-js-form>
+            <h2>Ajouter une tâche</h2>
+            <div data-js-input>
+                <div>
+                    <label>Nouvelle tâche:
+                        <input type="text" name="task">
+                    </label>
+                </div>
+                <div>
+                    <label>Description:
+                        <input type="text" name="description">
+                    </label>
+                </div>
+                <div data-js-radio>
+                    <label>Haute:</label>
+                    <input type="radio" name="importance" value="1">
+                    <label>Moyenne:</label>
+                    <input type="radio" name="importance" value="2">
+                    <label>Basse:</label>
+                    <input type="radio" name="importance" value="3">
+                </div>
+                <div><button data-js-btn>Ajouter</button></div>
+            </div>
+        </section>
+        <section>
+            <fieldset>
+                <h2>Liste de tâches</h2>
+                <div data-js-task-list>
+                    <!-- injection des tâches -->
+                </div>
+                <div data-js-task>
+                    <input type="button" data-js-btn-sort-alphabet value="Trier par ordre alphabétique">
+                    <input type="button" data-js-btn-sort-importance value="Trier par importance">
+                </div>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <div class="container">
+                    <h2>Détail d'une tâche</h2>
+                    <div class="chevron" data-js-chevron></div>
+                </div>
+                <div data-js-details class="details">
+                    <!-- injection de détails du tâche -->
+                </div>
+            </fieldset>
+        </section>
+    </main>
+</body>
+
+</html>

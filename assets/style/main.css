@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    padding-bottom: 40px;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input:not(type="button"){
+    display: inline;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+fieldset {
+    padding: 20px;
+}
+
+fieldset > * {
+    margin-bottom: 20px;
+}
+
+fieldset > input {
+    margin-right: 20px;
+}
+
+.tasks_list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+[data-js-input] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+[data-js-task-list] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chevron {
+    margin-left: auto;
+    padding: 10px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-225deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+
+.chevron::after {
+    transform: rotate(-45deg);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: clamp(50px, 45vw, 500px) 1fr;
+}
+
+.error {
+    color: red;
+}
+
+[data-js-details].show {
+    display: none;
+  }
+  
+  [data-js-details] {
+    display: block;
+  }
