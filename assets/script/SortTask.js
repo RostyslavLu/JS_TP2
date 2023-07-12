@@ -38,7 +38,7 @@ sortTasksByImportance() {
     displayTask.innerHTML = ''; 
 
     for (let i = 0; i < aTask.length; i++) {
-        let arrTask = aTaches[i];
+        let arrTask = aTask[i];
         let dom = `
                     <div class="tasks_list" data-js-task-item=${i+1}><p>Tache: ${arrTask.task}</p>
                     <span>Importance: ${arrTask.importance}</span>
